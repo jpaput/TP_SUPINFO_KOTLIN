@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Day2TP2</string>
+    <string name="welcome_title_text">Welcome</string>
+    <string name="detail_text">If you already know the name of your cocktail, and you want to know the recipe, write is name below and let yourself be guided.</string>
+    <string name="hint_cocktail_name">Cocktail name</string>
+    <string name="search_text">Search</string>
+    <string name="discover_cocktail_textButton">Otherwise, discover our cocktails</string>
+</resources>

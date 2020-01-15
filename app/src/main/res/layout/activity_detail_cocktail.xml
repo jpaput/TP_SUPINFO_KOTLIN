@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailCocktailActivity">
+
+    <ImageView
+        android:id="@+id/cocktailImageView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"/>
+
+    <TextView
+        android:id="@+id/cocktailName"
+        android:layout_below="@+id/cocktailImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_standard"
+        android:gravity="center_horizontal"
+        android:textSize="@dimen/standard_textsize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

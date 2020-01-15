@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="white">#ffffff</color>
+    <color name="search_button_background_normal">#b1b1b1</color>
+    <color name="search_button_background_pressed">#777777</color>
+    <color name="discover_buttoncolor">#FF0099</color>
+    <color name="discover_buttoncolor_pressed">#E11584</color>
+</resources>
