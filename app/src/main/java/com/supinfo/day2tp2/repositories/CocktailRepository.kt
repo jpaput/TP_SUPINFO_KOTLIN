@@ -4,6 +4,7 @@ import android.app.Application
 import androidx.annotation.WorkerThread
 import androidx.lifecycle.MutableLiveData
 import com.supinfo.day2tp2.WEB_SERVICE_BASE_URL
+import com.supinfo.day2tp2.core.TpDataBase
 import com.supinfo.day2tp2.data.Cocktail
 import com.supinfo.day2tp2.data.CocktailWrapper
 import com.supinfo.day2tp2.services.CocktailServices
@@ -19,11 +20,17 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 
 class CocktailRepository (val app :Application) {
 
-    val cocktailData = MutableLiveData<List<Cocktail>>()
+    var cocktailData = MutableLiveData<List<Cocktail>>()
+    val cocktailDAO = TpDataBase.getDatabase(app).cocktailDao()
 
     init{
         CoroutineScope(Dispatchers.IO).launch {
-            getData()
+            val data = cocktailDAO.getAll()
+            if(data.isEmpty()){
+                getData()
+            }else{
+                cocktailData.postValue(data)
+            }
         }
     }
 
@@ -34,5 +41,7 @@ class CocktailRepository (val app :Application) {
         val cocktailWrapper = cocktailService.getCocktail("a").body() ?: CocktailWrapper(emptyList())
 
         cocktailData.postValue(cocktailWrapper.cocktails)
+        cocktailDAO.deleteAll()
+        cocktailDAO.addCocktails(cocktailWrapper.cocktails)
     }
 }
