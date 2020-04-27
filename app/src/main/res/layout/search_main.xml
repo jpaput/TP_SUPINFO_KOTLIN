@@ -48,7 +48,7 @@
             android:layout_marginTop="@dimen/small_margin"
             android:text="@string/search_text"
             android:textColor="@color/white"
-            android:background="@color/search_button_color_selector"/>
+            android:drawable="@color/search_button_color_selector"/>
 
     </LinearLayout>
 
@@ -59,7 +59,7 @@
         android:layout_alignParentBottom="true"
         android:text="@string/discover_cocktail_textButton"
         android:textColor="@color/white"
-        android:background="@color/discover_button_color_selector"/>
+        android:drawable="@color/discover_button_color_selector"/>
 
 </RelativeLayout>
 
